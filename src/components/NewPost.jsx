@@ -35,7 +35,10 @@ function NewPost() {
           alert("Post created successfully");
         })
         .catch((err) => console.error(err))
-        .finally(() => navigate("/"));
+        .finally(() => {
+          navigate("/");
+          navigate(0);
+        });
     }
   };
   return (

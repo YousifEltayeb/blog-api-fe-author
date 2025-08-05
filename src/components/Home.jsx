@@ -8,7 +8,8 @@ function Home() {
   const { isLoggedIn } = useLogin();
   const { posts, error, loading } = useAllPosts();
   const navigate = useNavigate();
-  if (loading) {
+  console.log(isLoggedIn);
+  if (loading || isLoggedIn === undefined) {
     return <Skeleton />;
   }
   if (error) {
@@ -29,7 +30,7 @@ function Home() {
         <Login />
       ) : (
         <>
-          <div class="text-center mb-8">
+          <div class="text-center mb-8 p-4">
             <Button onClick={handleNewPost}>New Post</Button>
           </div>
           {posts.map((post) => {

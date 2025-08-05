@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 const VITE_SERVER_URL = import.meta.env.VITE_SERVER_URL;
 
 export const useLogin = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState();
   const token = window.localStorage.getItem("token");
   useEffect(() => {
     if (token) {

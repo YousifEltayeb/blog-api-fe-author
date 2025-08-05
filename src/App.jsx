@@ -7,6 +7,7 @@ import Logout from "./components/Logout.jsx";
 import Post from "./components/Post.jsx";
 import NewPost from "./components/NewPost.jsx";
 import ErrorPage from "./components/ErrorPage.jsx";
+import Comments from "./components/Comments.jsx";
 import { AllPostsDataProvider } from "./hooks/useAllPosts.jsx";
 import "./App.css";
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<Logout />} />
           <Route path="/new-post" element={<NewPost />} />
+          <Route path="/comments" element={<Comments />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
         <Footer />
