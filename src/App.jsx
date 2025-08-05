@@ -5,6 +5,7 @@ import Home from "./components/Home.jsx";
 import Login from "./components/Login.jsx";
 import Logout from "./components/Logout.jsx";
 import Post from "./components/Post.jsx";
+import NewPost from "./components/NewPost.jsx";
 import ErrorPage from "./components/ErrorPage.jsx";
 import { AllPostsDataProvider } from "./hooks/useAllPosts.jsx";
 import "./App.css";
@@ -19,6 +20,7 @@ function App() {
           <Route path="/posts/:postId" element={<Post />} />
           <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<Logout />} />
+          <Route path="/new-post" element={<NewPost />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
         <Footer />
