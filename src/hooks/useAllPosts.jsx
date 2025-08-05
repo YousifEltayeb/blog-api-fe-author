@@ -6,8 +6,16 @@ export const AllPostsDataProvider = ({ children }) => {
   const [posts, setPosts] = useState();
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
+  const token = window.localStorage.getItem("token");
   useEffect(() => {
-    fetch(`${VITE_SERVER_URL}/posts`, { method: "GET", mode: "cors" })
+    fetch(`${VITE_SERVER_URL}/posts`, {
+      method: "GET",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + token,
+      },
+    })
       .then((response) => {
         if (response.status !== 200) {
           setError(response);
@@ -18,7 +26,7 @@ export const AllPostsDataProvider = ({ children }) => {
       .then((response) => setPosts(response))
       .catch((err) => setError(err))
       .finally(() => setLoading(false));
-  }, []);
+  }, [token]);
 
   return (
     <Context.Provider value={{ posts, error, loading }}>
