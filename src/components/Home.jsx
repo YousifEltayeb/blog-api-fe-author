@@ -8,7 +8,6 @@ function Home() {
   const { isLoggedIn } = useLogin();
   const { posts, error, loading } = useAllPosts();
   const navigate = useNavigate();
-  console.log(isLoggedIn);
   if (loading || isLoggedIn === undefined) {
     return <Skeleton />;
   }

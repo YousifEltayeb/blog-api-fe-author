@@ -5,7 +5,6 @@ import Skeleton from "./Skeleton.jsx";
 import useComments from "../hooks/useComments.jsx";
 const Comments = () => {
   const { comments, error, loading } = useComments();
-  console.log(comments);
   const navigate = useNavigate();
   if (loading) {
     return <Skeleton />;
