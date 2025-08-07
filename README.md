@@ -1,12 +1,55 @@
-# React + Vite
+# Blog API Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend for the blog API backend, which can be found at <https://github.com/YousifEltayeb/blog-api-be/tree/main>.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- View all blog posts.
+- View individual posts and their comments.
+- Add comments to posts.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+- Node.js and npm (or a compatible package manager like yarn or pnpm).
+
+### Installing
+
+Clone the repository:
+
+```bash
+git clone https://github.com/YousifEltayeb/blog-api-fe-author.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd blog-api-fe-author
+```
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+### Available Scripts
+
+In the project directory, you can run:
+
+- `npm run dev`: Runs the app in development mode. Open <http://localhost:5173> to view it in the browser.
+- `npm run build`: Builds the app for production to the `dist` folder.
+- `npm run lint`: Lints the project files using ESLint.
+- `npm run preview`: Serves the production build locally for preview.
+
+## Built With
+
+- [React](httpss://react.dev/) - The web framework used.
+- [Vite](https://vitejs.dev/) - The build tool.
+- [React Router](https://reactrouter.com/en/main) - For routing.
+- [Tailwind CSS](https://tailwindcss.com/) - For styling.
+- [Radix UI](https://www.radix-ui.com/) - For accessible UI components.
+
