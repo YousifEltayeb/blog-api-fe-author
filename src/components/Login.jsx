@@ -1,4 +1,5 @@
 const VITE_SERVER_URL = import.meta.env.VITE_SERVER_URL;
+import { useNavigate } from "react-router";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -10,6 +11,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 const Login = () => {
+  const navigate = useNavigate();
   const handleLogin = async (formData) => {
     await fetch(`${VITE_SERVER_URL}/auth/login`, {
       mode: "cors",
@@ -23,10 +25,12 @@ const Login = () => {
         return response.json();
       })
       .then((json) => {
+        console.log(json);
         window.localStorage.setItem("token", json.token);
+        navigate("/");
+        navigate(0);
       })
-      .catch((err) => console.error(err))
-      .finally(() => window.location.reload());
+      .catch((err) => console.error(err));
   };
   return (
     <Card className="w-full max-w-sm">

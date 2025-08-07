@@ -15,14 +15,9 @@ export const useLogin = () => {
         },
       })
         .then((response) => {
-          if (response.status !== 200) {
-            setIsLoggedIn(false);
-            return;
-          }
-          return response.json();
-        })
-        .then(() => {
-          setIsLoggedIn(true);
+          if (response.status === 200) {
+            setIsLoggedIn(true);
+          } else setIsLoggedIn(false);
         })
         .catch((err) => {
           console.error(err);

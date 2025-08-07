@@ -31,8 +31,10 @@ function NewPost() {
         },
         body: new URLSearchParams({ title, content }),
       })
-        .then(() => {
-          alert("Post created successfully");
+        .then((res) => {
+          if (res.status === 201) {
+            alert("Post created successfully");
+          } else alert(res.statusText);
         })
         .catch((err) => console.error(err))
         .finally(() => {
