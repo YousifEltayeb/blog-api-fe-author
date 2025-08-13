@@ -24,7 +24,7 @@ function Home() {
     navigate("/new-post");
   };
   return (
-    <main class=" min-h-full m-auto text-left ">
+    <main class="flex flex-col min-h-full m-auto text-left w-full grow">
       {!isLoggedIn ? (
         <Login />
       ) : (
@@ -34,7 +34,7 @@ function Home() {
           </div>
           {posts.map((post) => {
             return (
-              <li key={post.id} class="mb-12 list-none">
+              <li key={post.id} class="px-48 mb-12 list-none grow">
                 <Link
                   class="text-3xl font-bold hover:underline"
                   to={`/posts/${post.id}`}
